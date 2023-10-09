@@ -5,7 +5,7 @@ const BottomBarItem = ({ text, route }: { text: string; route: string}) => {
   return (
     <div>
         <Link href={'/' + route}>
-            <button className='btn btn-neutral'>{text}</button>
+            <button className='btn btn-neutral join-item'>{text}</button>
         </Link>
     </div>
   )

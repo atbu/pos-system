@@ -12,6 +12,9 @@ const CurrentOrder = () => {
                 <OrderItem name="Coca-Cola" size="Large"></OrderItem>
             </div>
         </table>
+        <div className='absolute bottom-2 right-2 left-2'>
+            <button className='btn btn-secondary btn-block h-20'>PAY</button>
+        </div>
     </div>
   )
 }

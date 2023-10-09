@@ -7,7 +7,7 @@ export default function Home() {
       <div className='absolute bottom-5 left-5'>
           <BottomBar />
       </div>
-      <div className='absolute inset-y-0 right-0 w-1/3 h-screen-max border border-black'>
+      <div className='absolute inset-y-0 right-0 w-1/3 h-screen-max border-l-2 border-black'>
         <CurrentOrder />
       </div>
     </main>

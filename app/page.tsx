@@ -1,5 +1,11 @@
+import BottomBar from "./components/BottomBar"
+
 export default function Home() {
   return (
-    <main><h1>Hello world!</h1></main>
+    <main>
+      <div className='absolute bottom-5 left-5'>
+          <BottomBar />
+      </div>
+    </main>
   )
 }

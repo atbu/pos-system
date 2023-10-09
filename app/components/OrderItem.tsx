@@ -1,6 +1,6 @@
 import React from 'react'
 
-const OrderItem = ( { name, size }: { name: string; size: string }) => {
+const OrderItem = ( { name, size, requirements="" }: { name: string; size: string; requirements?: string }) => {
   return (
     <div>
         <tr>
@@ -8,6 +8,7 @@ const OrderItem = ( { name, size }: { name: string; size: string }) => {
                 <div className='pl-3'>
                     - {name}
                     <div className='badge badge-primary ml-2'>{size}</div>
+                    { requirements != "" ? <div className='badge badge-accent ml-2'>{requirements}</div> : null }
                 </div>
             </td>
         </tr>

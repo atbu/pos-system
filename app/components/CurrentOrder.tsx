@@ -7,9 +7,9 @@ const CurrentOrder = () => {
         <table>
             <div className='flex flex-col space-y-1'>
                 <div className='p-2'><th>Current Order</th></div>
-                <OrderItem name="Cheeseburger" size="Large" requirements="No Pickle"></OrderItem>
-                <OrderItem name="Fries" size="Medium"></OrderItem>
-                <OrderItem name="Coca-Cola" size="Large"></OrderItem>
+                <OrderItem name="Cheeseburger" size="Large" price="£8.00" requirements="No Pickle"></OrderItem>
+                <OrderItem name="Fries" price="£8.00" size="Medium"></OrderItem>
+                <OrderItem name="Coca-Cola" price="£8.00" size="Large"></OrderItem>
             </div>
         </table>
         <div className='absolute bottom-2 right-2 left-2'>

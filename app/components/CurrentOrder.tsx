@@ -1,25 +1,32 @@
+'use client';
+
 import React from 'react'
+import { useState } from 'react'
 import OrderItem from './OrderItem'
+import ItemGrid from './ItemGrid'
 
-let orderItems = [{
-  name: 'test',
-  price: 8,
-  size: 'test'
-}];
-
-function addItemToOrder(name: string, price: number, size: string){
-  orderItems.push({name, price, size});
-}
+const orderArray = [];
 
 const CurrentOrder = () => {
+  const [currentOrder, setCurrentOrder] = useState(orderArray);
+
+  const handleAddItem = () => {
+    setCurrentOrder((prevOrder) => [
+      ...prevOrder,
+      <OrderItem name="test1" price={7} size="Medium"></OrderItem>
+    ])
+  }
+
   return (
     <div>
-      <>
-        {orderItems.map(item => (
-          <OrderItem name={item.name} price={item.price} size={item.size}></OrderItem>
-        ))}
-      </>
+      <div className='absolute top-5 left-5'>
+        <ItemGrid />
+      </div>
       <div>
+        <ul>
+          {currentOrder.map(item => item)}
+        </ul>
+        <button className='button button-ghost' onClick={handleAddItem}>Hello</button>
         <div className='absolute bottom-2 right-2 left-2'>
             <button className='btn btn-secondary btn-block h-20'>PAY</button>
         </div>

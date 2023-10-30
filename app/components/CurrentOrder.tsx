@@ -4,6 +4,10 @@ import React from 'react'
 import { useState } from 'react'
 import OrderItem from './OrderItem'
 import ItemGrid from './ItemGrid'
+import { useRouter } from 'next/navigation';
+
+import prisma from '../../lib/prisma'
+import { Item, Size, Prisma } from '@prisma/client'
 
 const orderArray = [];
 
@@ -16,6 +20,20 @@ const CurrentOrder = () => {
       <OrderItem name="test1" price={7} size="Medium"></OrderItem>
     ])
   }
+    
+  const router = useRouter();
+  const create = async (e: React.SyntheticEvent) => {
+    e.preventDefault();
+    await fetch(`/api/orderItem`, {
+        method: "POST",
+        credentials: "include",
+        headers: { "Content-Type": "application/json", },
+    });
+
+    router.refresh();
+  }
+
+  
 
   return (
     <div>
@@ -28,7 +46,7 @@ const CurrentOrder = () => {
         </ul>
         <button className='button button-ghost' onClick={handleAddItem}>Hello</button>
         <div className='absolute bottom-2 right-2 left-2'>
-            <button className='btn btn-secondary btn-block h-20'>PAY</button>
+            <button className='btn btn-secondary btn-block h-20' onClick={create}>PAY</button>
         </div>
       </div>
     </div>

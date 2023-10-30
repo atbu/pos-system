@@ -6,18 +6,31 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
+  provider = "postgresql"
+  url      = "postgresql://postgres:password@localhost:5432/possystem"
 }
 
 model Order {
-  id    Int     @id @default(autoincrement())
-  items Item[]
-  total Float
+  orderId Int       @id @default(autoincrement())
+  items   OrderItem[]
+  total   Float
 }
 
-model Item {
-  id    Int     @id @default(autoincrement())
-  name  String
-  price Float
+model OrderItem {
+  orderItemId Int @id @default(autoincrement())
+  item        Item
+  size        Size
+  price       Float
+  order       Order @relation(fields: [orderItemId], references: [orderId])
+}
+
+enum Item {
+  CHEESEBURGER
+  FRIES
+}
+
+enum Size {
+  SMALL
+  MEDIUM
+  LARGE
 }

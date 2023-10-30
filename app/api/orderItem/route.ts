@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import prisma from '../../../lib/prisma';
-import { Item, Size } from '@prisma/client'
+import { Item, Size, Status } from '@prisma/client'
 
 export async function POST(req: Request) {
     // const { item } = await req.json();
@@ -15,6 +15,7 @@ export async function POST(req: Request) {
               },
             },
             total: 8.50,
+            status: Status.NEW,
           },
         })
 

@@ -14,6 +14,7 @@ model Order {
   orderId Int       @id @default(autoincrement())
   items   OrderItem[]
   total   Float
+  status  Status
 }
 
 model OrderItem {
@@ -33,4 +34,11 @@ enum Size {
   SMALL
   MEDIUM
   LARGE
+}
+
+enum Status {
+  NEW
+  IN_PROGRESS
+  READY
+  COMPLETED
 }

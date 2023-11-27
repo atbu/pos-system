@@ -37,9 +37,6 @@ const CurrentOrder = () => {
 
   return (
     <div>
-      <div className='absolute top-5 left-5'>
-        <ItemGrid />
-      </div>
       <div>
         <ul>
           {currentOrder.map(item => item)}

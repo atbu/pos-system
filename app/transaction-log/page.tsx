@@ -16,7 +16,7 @@ const page = async () => {
               <p key={item.orderItemId}>{item.orderItemId} {item.item} {item.size} {item.price}</p>
             ))} 
 
-            {order.status}</p>
+            {order.status} {order.orderCreated}</p>
         ))}
     </div>
   )

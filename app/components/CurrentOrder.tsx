@@ -1,13 +1,9 @@
-'use client';
+"use client";
 
 import React from 'react'
 import { useState } from 'react'
 import OrderItem from './OrderItem'
-import ItemGrid from './ItemGrid'
 import { useRouter } from 'next/navigation';
-
-import prisma from '../../lib/prisma'
-import { Item, Size, Prisma } from '@prisma/client'
 
 const orderArray = [];
 
@@ -39,7 +35,7 @@ const CurrentOrder = () => {
     <div>
       <div>
         <ul>
-          {currentOrder.map(item => item)}
+          {currentOrder.map(item => <li>{item}</li>)}
         </ul>
         <button className='button button-ghost' onClick={handleAddItem}>Hello</button>
         <div className='absolute bottom-2 right-2 left-2'>

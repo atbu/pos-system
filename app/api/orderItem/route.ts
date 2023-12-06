@@ -3,8 +3,6 @@ import prisma from '../../../lib/prisma';
 import { Item, Size, Status } from '@prisma/client'
 
 export async function POST(req: Request) {
-    // const { item } = await req.json();
-
     const createOrder = await prisma.order.create({
           data: {
             items: {

@@ -8,21 +8,23 @@ generator client {
 datasource db {
   provider = "postgresql"
   url      = "postgresql://postgres:password@localhost:5432/possystem"
+  // obviously in a real situation, the password would be something more secure than 'password' but since this system is for development and won't ever be exposed to the internet it doesn't really matter
 }
 
 model Order {
-  orderId Int       @id @default(autoincrement())
-  items   OrderItem[]
-  total   Float
-  status  Status
+  orderId       Int         @id @default(autoincrement())
+  items         OrderItem[]
+  total         Float
+  status        Status
+  orderCreated  DateTime    @default(now())
 }
 
 model OrderItem {
-  orderItemId Int @id @default(autoincrement())
-  item        Item
-  size        Size
-  price       Float
-  order       Order @relation(fields: [orderItemId], references: [orderId])
+  orderItemId   Int         @id @default(autoincrement())
+  item          Item
+  size          Size
+  price         Float
+  order         Order       @relation(fields: [orderItemId], references: [orderId])
 }
 
 enum Item {

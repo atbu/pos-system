@@ -1,4 +1,3 @@
-import {useState} from 'react'
 import BottomBar from "./components/BottomBar"
 import CurrentOrder from "./components/CurrentOrder"
 import ItemGrid from './components/ItemGrid'
@@ -14,8 +13,8 @@ export default function Home() {
           <CurrentOrder />
         </div>
         <div className='absolute top-5 left-5'>
-        <ItemGrid />
-      </div>
+          <ItemGrid />
+        </div>
       </div>
     </main>
   )

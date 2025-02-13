@@ -1,0 +1,63 @@
+"filename", "language", "Properties", "JSON with Comments", "JSON", "TypeScript", "JavaScript", "TypeScript JSX", "Prisma", "CSS", "Markdown", "SQL", "comment", "blank", "total"
+"c:\Dev\pos-system\.env", "Properties", 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 2, 7
+"c:\Dev\pos-system\.eslintrc.json", "JSON", 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4
+"c:\Dev\pos-system\README.md", "Markdown", 0, 0, 0, 0, 0, 0, 0, 0, 21, 0, 0, 14, 35
+"c:\Dev\pos-system\app\actions.ts", "TypeScript", 0, 0, 0, 115, 0, 0, 0, 0, 0, 0, 14, 20, 149
+"c:\Dev\pos-system\app\api\activeCategories\route.ts", "TypeScript", 0, 0, 0, 27, 0, 0, 0, 0, 0, 0, 13, 15, 55
+"c:\Dev\pos-system\app\api\createOrder\route.ts", "TypeScript", 0, 0, 0, 21, 0, 0, 0, 0, 0, 0, 7, 9, 37
+"c:\Dev\pos-system\app\api\getActiveOrders\route.ts", "TypeScript", 0, 0, 0, 20, 0, 0, 0, 0, 0, 0, 6, 13, 39
+"c:\Dev\pos-system\app\api\getAllOrdersByDate\route.ts", "TypeScript", 0, 0, 0, 18, 0, 0, 0, 0, 0, 0, 3, 13, 34
+"c:\Dev\pos-system\app\api\getAllOrders\route.ts", "TypeScript", 0, 0, 0, 18, 0, 0, 0, 0, 0, 0, 3, 13, 34
+"c:\Dev\pos-system\app\api\getAllProducts\route.ts", "TypeScript", 0, 0, 0, 18, 0, 0, 0, 0, 0, 0, 3, 9, 30
+"c:\Dev\pos-system\app\api\getAllTipsLastWeek\route.ts", "TypeScript", 0, 0, 0, 36, 0, 0, 0, 0, 0, 0, 3, 14, 53
+"c:\Dev\pos-system\app\api\getAllUsers\route.ts", "TypeScript", 0, 0, 0, 18, 0, 0, 0, 0, 0, 0, 3, 9, 30
+"c:\Dev\pos-system\app\api\getDoesUserExist\[pin]\route.ts", "TypeScript", 0, 0, 0, 19, 0, 0, 0, 0, 0, 0, 4, 8, 31
+"c:\Dev\pos-system\app\api\getGiftCards\route.ts", "TypeScript", 0, 0, 0, 18, 0, 0, 0, 0, 0, 0, 3, 9, 30
+"c:\Dev\pos-system\app\api\getProductsFromCategory\[slug]\route.ts", "TypeScript", 0, 0, 0, 18, 0, 0, 0, 0, 0, 0, 4, 7, 29
+"c:\Dev\pos-system\app\api\inactiveMenus\route.ts", "TypeScript", 0, 0, 0, 25, 0, 0, 0, 0, 0, 0, 6, 9, 40
+"c:\Dev\pos-system\app\components\BottomBar.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 18, 0, 0, 0, 0, 11, 3, 32
+"c:\Dev\pos-system\app\components\BottomBarLink.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 12, 0, 0, 0, 0, 4, 4, 20
+"c:\Dev\pos-system\app\components\CategoryListItem.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 28, 0, 0, 0, 0, 5, 8, 41
+"c:\Dev\pos-system\app\components\ChangeMenuButton.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 32, 0, 0, 0, 0, 7, 10, 49
+"c:\Dev\pos-system\app\components\ChangeUserButton.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 33, 0, 0, 0, 0, 0, 8, 41
+"c:\Dev\pos-system\app\components\CurrentOrder.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 102, 0, 0, 0, 0, 9, 24, 135
+"c:\Dev\pos-system\app\components\HomeButton.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 16, 0, 0, 0, 0, 0, 2, 18
+"c:\Dev\pos-system\app\components\Item.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 33, 0, 0, 0, 0, 6, 8, 47
+"c:\Dev\pos-system\app\components\ItemGrid.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 20, 0, 0, 0, 0, 10, 9, 39
+"c:\Dev\pos-system\app\components\KDSTimer.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 29, 0, 0, 0, 0, 19, 9, 57
+"c:\Dev\pos-system\app\components\OrderItem.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 24, 0, 0, 0, 0, 6, 4, 34
+"c:\Dev\pos-system\app\components\PayModal.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 140, 0, 0, 0, 0, 0, 19, 159
+"c:\Dev\pos-system\app\components\StatusUpdateButton.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 13, 0, 0, 0, 0, 5, 5, 23
+"c:\Dev\pos-system\app\gift-cards\page.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 70, 0, 0, 0, 0, 1, 17, 88
+"c:\Dev\pos-system\app\globals.css", "CSS", 0, 0, 0, 0, 0, 0, 0, 14, 0, 0, 0, 4, 18
+"c:\Dev\pos-system\app\kitchen\page.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 61, 0, 0, 0, 0, 31, 15, 107
+"c:\Dev\pos-system\app\layout.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 19, 0, 0, 0, 0, 0, 4, 23
+"c:\Dev\pos-system\app\page.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 25, 0, 0, 0, 0, 1, 5, 31
+"c:\Dev\pos-system\app\product-manager\page.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 95, 0, 0, 0, 0, 2, 16, 113
+"c:\Dev\pos-system\app\settings\page.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 18, 0, 0, 0, 0, 9, 4, 31
+"c:\Dev\pos-system\app\statistics\page.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 127, 0, 0, 0, 0, 11, 25, 163
+"c:\Dev\pos-system\app\transaction-log\page.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 54, 0, 0, 0, 0, 16, 12, 82
+"c:\Dev\pos-system\next.config.js", "JavaScript", 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 1, 2, 5
+"c:\Dev\pos-system\package-lock.json", "JSON", 0, 0, 4873, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4874
+"c:\Dev\pos-system\package.json", "JSON", 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 1, 36
+"c:\Dev\pos-system\postcss.config.js", "JavaScript", 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 1, 7
+"c:\Dev\pos-system\prisma\migrations\20240101093040_initial\migration.sql", "SQL", 0, 0, 0, 0, 0, 0, 0, 0, 0, 34, 6, 10, 50
+"c:\Dev\pos-system\prisma\migrations\20240101102426_link_categories_to_menus\migration.sql", "SQL", 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 12, 4, 20
+"c:\Dev\pos-system\prisma\migrations\20240101104817_add_selected_bool_to_menu\migration.sql", "SQL", 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 3
+"c:\Dev\pos-system\prisma\migrations\20240101104947_rename_selected_to_active\migration.sql", "SQL", 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 7, 1, 10
+"c:\Dev\pos-system\prisma\migrations\20240104161520_change_default_status_to_new\migration.sql", "SQL", 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 3
+"c:\Dev\pos-system\prisma\migrations\20240105172902_change_capitalisation_on_statuses\migration.sql", "SQL", 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 3
+"c:\Dev\pos-system\prisma\migrations\20240116165945_add_discount_to_order\migration.sql", "SQL", 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 3
+"c:\Dev\pos-system\prisma\migrations\20240116182933_change_to_total_and_subtotal\migration.sql", "SQL", 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 9, 1, 13
+"c:\Dev\pos-system\prisma\migrations\20240116193246_add_giftcards\migration.sql", "SQL", 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 1, 2, 12
+"c:\Dev\pos-system\prisma\migrations\20240116193539_add_giftcard_active\migration.sql", "SQL", 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 3
+"c:\Dev\pos-system\prisma\migrations\20240116222016_add_mop\migration.sql", "SQL", 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 7, 1, 9
+"c:\Dev\pos-system\prisma\migrations\20240322195706_add_stock_and_on_order_values\migration.sql", "SQL", 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 1, 1, 4
+"c:\Dev\pos-system\prisma\migrations\20240407190825_add_user_model\migration.sql", "SQL", 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 10, 5, 26
+"c:\Dev\pos-system\prisma\migrations\20240419140030_add_tips\migration.sql", "SQL", 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 3, 4, 17
+"c:\Dev\pos-system\prisma\schema.prisma", "Prisma", 0, 0, 0, 0, 0, 0, 77, 0, 0, 0, 3, 9, 89
+"c:\Dev\pos-system\tailwind.config.ts", "TypeScript", 0, 0, 0, 22, 0, 0, 0, 0, 0, 0, 0, 2, 24
+"c:\Dev\pos-system\tsconfig.json", "JSON with Comments", 0, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 28
+"c:\Dev\pos-system\util\prisma.ts", "TypeScript", 0, 0, 0, 11, 0, 0, 0, 0, 0, 0, 7, 7, 25
+"c:\Dev\pos-system\util\store.ts", "TypeScript", 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 16, 2, 80
+"Total", "-", 1, 27, 4911, 466, 8, 969, 77, 14, 21, 81, 317, 440, 7332

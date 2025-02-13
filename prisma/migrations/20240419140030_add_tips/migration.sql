@@ -1,0 +1,16 @@
+-- CreateTable
+CREATE TABLE "Tip" (
+    "id" SERIAL NOT NULL,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "amount" DECIMAL(65,30) NOT NULL,
+    "userPin" TEXT NOT NULL,
+    "orderId" INTEGER NOT NULL,
+
+    CONSTRAINT "Tip_pkey" PRIMARY KEY ("id")
+);
+
+-- AddForeignKey
+ALTER TABLE "Tip" ADD CONSTRAINT "Tip_userPin_fkey" FOREIGN KEY ("userPin") REFERENCES "User"("pin") ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "Tip" ADD CONSTRAINT "Tip_orderId_fkey" FOREIGN KEY ("orderId") REFERENCES "Order"("id") ON DELETE RESTRICT ON UPDATE CASCADE;

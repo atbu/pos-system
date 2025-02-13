@@ -1,23 +1,47 @@
-'use client';
 import React from 'react'
-import { Size } from '@prisma/client'
+import CategoryListItem from './CategoryListItem';
 
-const Item = ( { name }: { name: string } ) => {
-  function handleClick(name: string, price: number, size: string) {
-    console.log(name, price, size)
+// Gets the products from the specified category using the slug provided and returns them as converted JSON.
+const getData = async (slug: string) => {
+  const res = await fetch(`http://localhost:3000/api/getProductsFromCategory/${slug}`, {
+    cache:"no-store"
+  })
+
+  if(!res.ok){
+    throw new Error("Failed!");
   }
+
+  return res.json()
+}
+
+const Item = async ( props: { title: string, desc: string, slug: string } ) => {
+
+  // Stores the products fetched from the database in a variable.
+  const products = await getData(props.slug)
+
+  /*
+  Creates a card for each category, with a button labelled 'Open' that opens a dropdown menu
+  containing CategoryListItems, which correspond to each item in each category.
+  */
   return (
     <div>
-      <div className="border p-2">
-          { name }<br />
-          <div className='join'>
-            <button className='btn btn-secondary btn-outline btn-sm m-1 join-item' onClick={() => {handleClick(name, 1, Size.SMALL.toString())}}>{Size.SMALL[0]}</button>
-            <button className='btn btn-secondary btn-outline btn-sm m-1 join-item' onClick={() => {handleClick(name, 2, Size.MEDIUM.toString())}}>{Size.MEDIUM[0]}</button>
-            <button className='btn btn-secondary btn-outline btn-sm m-1 join-item' onClick={() => {handleClick(name, 3, Size.LARGE.toString())}}>{Size.LARGE[0]}</button>
+      <div className="card w-96 border border-neutral-600">
+        <div className="card-body">
+          <h2 className="card-title">{props.title}</h2>
+          <p>{props.desc}</p>
+          <div className="card-actions justify-end">
+            <div className="dropdown">
+              <div tabIndex={0} role="button" className="btn m-1">Open</div>
+              <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                {products.map((product) => <CategoryListItem product={product} />)}
+              </ul>
+            </div>
           </div>
+        </div>
       </div>
     </div>
   )
+
 }
 
 export default Item

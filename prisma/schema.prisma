@@ -11,36 +11,79 @@ datasource db {
   // obviously in a real situation, the password would be something more secure than 'password' but since this system is for development and won't ever be exposed to the internet it doesn't really matter
 }
 
+model Menu {
+  id          Int         @id @default(autoincrement())
+  createdAt   DateTime    @default(now())
+  title       String
+  slug        String      @unique
+  active      Boolean     @default(false)
+  categories  Category[]
+}
+
+model Category {
+  id          Int         @id @default(autoincrement())
+  createdAt   DateTime    @default(now())
+  title       String
+  desc        String
+  slug        String      @unique
+  products    Product[]
+  menu        Menu        @relation(fields: [menuSlug], references: [slug])
+  menuSlug    String
+}
+
+model Product {
+  id          Int         @id @default(autoincrement())
+  createdAt   DateTime    @default(now())
+  title       String
+  desc        String
+  price       Decimal
+  options     Json[]
+  category    Category    @relation(fields: [catSlug], references: [slug])
+  catSlug     String
+  stock       Int         @default(0) // amount of stock in inventory
+  onOrder     Int         @default(0) // amount of stock that has been ordered and is awaiting delivery
+}
+
 model Order {
-  orderId       Int         @id @default(autoincrement())
-  items         OrderItem[]
-  total         Float
-  status        Status
-  orderCreated  DateTime    @default(now())
+  id          Int         @id @default(autoincrement())
+  createdAt   DateTime    @default(now())
+  subtotal    Decimal
+  total       Decimal
+  products    Json[]
+  status      String      @default("New")
+  discount    Decimal     @default(0)
+  mop         String      // Method of payment
+  user        User        @relation(fields: [userPin], references: [pin])
+  userPin     String
+  tips        Tip[]
 }
 
-model OrderItem {
-  orderItemId   Int         @id @default(autoincrement())
-  item          Item
-  size          Size
-  price         Float
-  order         Order       @relation(fields: [orderItemId], references: [orderId])
+model GiftCard {
+  id          Int         @id @default(autoincrement())
+  createdAt   DateTime    @default(now())
+  value       Decimal     @default(0)
+  name        String
+  message     String
+  code        String      @default(uuid())
+  active      Boolean     @default(true)
 }
 
-enum Item {
-  CHEESEBURGER
-  FRIES
+model User {
+  id          Int         @id @default(autoincrement())
+  createdAt   DateTime    @default(now())
+  pin         String      @unique // It is a string so leading zeros are not deleted
+  fullName    String
+  initials    String
+  orders      Order[]
+  tips        Tip[]
 }
 
-enum Size {
-  SMALL
-  MEDIUM
-  LARGE
-}
-
-enum Status {
-  NEW
-  IN_PROGRESS
-  READY
-  COMPLETED
+model Tip {
+  id          Int         @id @default(autoincrement())
+  createdAt   DateTime    @default(now())
+  amount      Decimal
+  user        User        @relation(fields: [userPin], references: [pin])
+  userPin     String
+  order       Order       @relation(fields: [orderId], references: [id])
+  orderId     Int
 }
